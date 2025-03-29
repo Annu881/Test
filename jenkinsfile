@@ -20,7 +20,7 @@ pipeline {
    stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Annu881/Test.git' branch: 'master'
+                git 'https://github.com/Annu881/Test.git' branch:'master'
             }
         }
     }
