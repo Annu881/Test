@@ -1,7 +1,12 @@
 pipeline {
     agent any
 
-   
+   stages {
+        stage ('Clone') {
+            steps {
+                git echo 'https://github.com/Annu881/Test.git' branch 'master'
+            }
+        }
         stage ('Install Dependencies') {
             steps {
                 sh echo 'npm install'
@@ -17,11 +22,6 @@ pipeline {
                 sh  echo 'npm run build'
             }
         }
-   stages {
-        stage ('Clone') {
-            steps {
-                git echo 'https://github.com/Annu881/Test.git' branch 'master'
-            }
-        }
+   
     }
 }
