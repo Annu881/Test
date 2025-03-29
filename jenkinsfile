@@ -4,22 +4,22 @@ pipeline {
    stages {
         stage ('Clone') {
             steps {
-                git echo 'https://github.com/Annu881/Test.git' branch 'master'
+                git 'https://github.com/Annu881/Test.git' branch 'master'
             }
         }
         stage ('Install Dependencies') {
             steps {
-                sh echo 'npm install'
+                sh 'npm install'
             }
         }
         stage ('Run Tests') {
             steps {
-                sh  echo 'npm test || echo "No tests defined"'
+                sh 'npm test || echo "No tests defined"'
             }
         }
         stage ('Build Application') {
             steps {
-                sh  echo 'npm run build'
+                sh 'npm run build'
             }
         }
    
