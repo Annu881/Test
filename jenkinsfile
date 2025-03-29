@@ -2,11 +2,6 @@ pipeline {
     agent any
 
    stages {
-        stage ('Clone') {
-            steps {
-                git 'https://github.com/Annu881/Test.git' branch 'master'
-            }
-        }
         stage ('Install Dependencies') {
             steps {
                 sh 'npm install'
